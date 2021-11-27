@@ -42,12 +42,12 @@ public class Auto {
 
 
     //Машина может ехать -> если у нее не пустой бак
-    public static boolean CanGo(double amountOfFuelInTheTank) {
+    public boolean CanGo() {
         return amountOfFuelInTheTank > 0;
     }
 
     //Машина допущена к эксплуатации -> если у дата техосмотра не превышает 2 года
-    public static boolean ApprovedForUse(String dateOfInspection) {
+    public boolean ApprovedForUse() {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         Date dateOne = null;
         Date todaySdate = new Date();
@@ -66,9 +66,9 @@ public class Auto {
     }
 
     //Сколько машина может проехать
-    public static double CarCanGo(int tank, double Consumption) {
+    public double CarCanGo() {
         double distance;
-        distance = tank / Consumption * 100;
+        distance = amountOfFuelInTheTank / fuelConsumption * 100;
         System.out.println("distance traveled by the car:" + distance);
         return distance;
 

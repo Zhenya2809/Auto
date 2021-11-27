@@ -21,30 +21,33 @@ public class TestCar {
     void testCarCanGoWithEmptyTank() {
         Auto car = new Auto(0, 16.5, "27.11.2020");
         System.out.println("может ли поехать авто с пустым баком?");
-        Assertions.assertFalse(Auto.CanGo(car.amountOfFuelInTheTank));
+
+       // Assertions.assertFalse(Auto.CanGo(car.amountOfFuelInTheTank));
+
+        Assertions.assertFalse(car.CanGo());
     }
     @Test
     void testCarCanGoWithFullTank() {
         Auto car = new Auto(60, 16.5, "27.11.2020");
         System.out.println("может ли поехать авто с полным баком?");
-        Assertions.assertTrue(Auto.CanGo(car.amountOfFuelInTheTank));
+        Assertions.assertTrue(car.CanGo());
     }
     @Test
     void testAprovedForUseCarMoreThen2Years(){
         Auto car = new Auto(60, 16.5, "27.11.2017");
         System.out.println("можно ли использовать машину, если времени с ТО прошло больше 2 лет?");
-        Assertions.assertFalse(Auto.ApprovedForUse(car.getDateOfInspection()));
+        Assertions.assertFalse(car.ApprovedForUse());
     }
     @Test
     void testAprovedForUseCarLessThen2Years(){
         Auto car = new Auto(60, 16.5, "27.11.2020");
         System.out.println("можно ли использовать машину, если времени с ТО прошло меньше 2 лет?");
-        Assertions.assertTrue(Auto.ApprovedForUse(car.getDateOfInspection()));
+        Assertions.assertTrue(car.ApprovedForUse());
     }
     @Test
     void testCarCanGO500kmWith50lTank(){
         Auto car = new Auto(50, 10d, "27.11.2020");
         System.out.println("проедет ли машина 500 км с расходом 10л /100км с заполненым баком на 50л?");
-        Assertions.assertEquals(Auto.CarCanGo(car.getAmountOfFuelInTheTank(),car.getFuelConsumption()),500);
+        Assertions.assertEquals(car.CarCanGo(),500);
     }
 }
