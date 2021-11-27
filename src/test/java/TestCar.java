@@ -8,11 +8,11 @@ public class TestCar {
         Auto car = new Auto(60, 16.5, "27.11.2020");
 
         int tank = car.getAmountOfFuelInTheTank();
-        double comsumption = car.getFuelConsumption();
+        double consumption = car.getFuelConsumption();
         String DateInspection = car.getDateOfInspection();
 
         Assertions.assertEquals(tank, 60);
-        Assertions.assertEquals(comsumption, 16.5);
+        Assertions.assertEquals(consumption, 16.5);
         Assertions.assertEquals(DateInspection, "27.11.2020");
     }
 
