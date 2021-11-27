@@ -5,13 +5,12 @@ import org.junit.jupiter.api.Test;
 public class TestCar {
     @Test
     void shouldCreateCar() {
-        // given
         Auto car = new Auto(60, 16.5, "27.11.2020");
-        // when
+
         int tank = car.getAmountOfFuelInTheTank();
         double comsumption = car.getFuelConsumption();
         String DateInspection = car.getDateOfInspection();
-        // then
+
         Assertions.assertEquals(tank, 60);
         Assertions.assertEquals(comsumption, 16.5);
         Assertions.assertEquals(DateInspection, "27.11.2020");
