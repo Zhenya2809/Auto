@@ -2,43 +2,26 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Auto {
+
     int amountOfFuelInTheTank;
+    double fuelConsumption;
+    String dateOfInspection;
+
 
     public Auto(int amountOfFuelInTheTank, double fuelConsumption, String dateOfInspection) {
         this.amountOfFuelInTheTank = amountOfFuelInTheTank;
         this.fuelConsumption = fuelConsumption;
         this.dateOfInspection = dateOfInspection;
     }
-
-    public Auto() {
-    }
-
     public int getAmountOfFuelInTheTank() {
         return amountOfFuelInTheTank;
     }
-
-    public void setAmountOfFuelInTheTank(int amountOfFuelInTheTank) {
-        this.amountOfFuelInTheTank = amountOfFuelInTheTank;
-    }
-
     public double getFuelConsumption() {
         return fuelConsumption;
     }
-
-    public void setFuelConsumption(double fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
-    }
-
     public String getDateOfInspection() {
         return dateOfInspection;
     }
-
-    public void setDateOfInspection(String dateOfInspection) {
-        this.dateOfInspection = dateOfInspection;
-    }
-
-    double fuelConsumption;
-    String dateOfInspection;
 
 
     //Машина может ехать -> если у нее не пустой бак
