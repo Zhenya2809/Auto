@@ -7,8 +7,8 @@ public class TestCar {
     void shouldCreateCar() {
         Auto car = new Auto(60, 16.5, "27.11.2020");
 
-        int tank = car.getAmountOfFuelInTheTank();
-        double consumption = car.getFuelConsumption();
+        int tank = car.getFuelInTank();
+        double consumption = car.getConsumption();
         String DateInspection = car.getDateOfInspection();
 
         Assertions.assertEquals(tank, 60);
@@ -17,28 +17,28 @@ public class TestCar {
     }
 
     @Test
-    void testCarCanGoWithEmptyTank() {
+    void testEmptyTank() {
         Auto car = new Auto(0, 16.5, "27.11.2020");
         Assertions.assertFalse(car.CanGo());
     }
     @Test
-    void testCarCanGoWithFullTank() {
+    void testFullTank() {
         Auto car = new Auto(60, 16.5, "27.11.2020");
         Assertions.assertTrue(car.CanGo());
     }
     @Test
-    void testAprovedForUseCarMoreThen2Years(){
+    void testMoreThen2Years(){
         Auto car = new Auto(60, 16.5, "27.11.2017");
         Assertions.assertFalse(car.ApprovedForUse());
     }
     @Test
-    void testAprovedForUseCarLessThen2Years(){
+    void testLessThen2Years(){
         Auto car = new Auto(60, 16.5, "27.11.2020");
         Assertions.assertTrue(car.ApprovedForUse());
     }
     @Test
-    void testCarCanGO500kmWith50lTank(){
+    void test500km(){
         Auto car = new Auto(50, 10d, "27.11.2020");
-        Assertions.assertEquals(car.CarCanGo(),500);
+        Assertions.assertEquals(car.CarDistance(),500);
     }
 }

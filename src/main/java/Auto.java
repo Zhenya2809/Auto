@@ -3,21 +3,21 @@ import java.util.Date;
 
 public class Auto {
 
-    int amountOfFuelInTheTank;
-    double fuelConsumption;
+    int FuelInTank;
+    double Consumption;
     String dateOfInspection;
 
 
-    public Auto(int amountOfFuelInTheTank, double fuelConsumption, String dateOfInspection) {
-        this.amountOfFuelInTheTank = amountOfFuelInTheTank;
-        this.fuelConsumption = fuelConsumption;
+    public Auto(int FuelInTank, double Consumption, String dateOfInspection) {
+        this.FuelInTank = FuelInTank;
+        this.Consumption = Consumption;
         this.dateOfInspection = dateOfInspection;
     }
-    public int getAmountOfFuelInTheTank() {
-        return amountOfFuelInTheTank;
+    public int getFuelInTank() {
+        return FuelInTank;
     }
-    public double getFuelConsumption() {
-        return fuelConsumption;
+    public double getConsumption() {
+        return Consumption;
     }
     public String getDateOfInspection() {
         return dateOfInspection;
@@ -26,7 +26,7 @@ public class Auto {
 
     //Машина может ехать -> если у нее не пустой бак
     public boolean CanGo() {
-        return amountOfFuelInTheTank > 0;
+        return FuelInTank > 0;
     }
 
     //Машина допущена к эксплуатации -> если у дата техосмотра не превышает 2 года
@@ -47,9 +47,9 @@ public class Auto {
     }
 
     //Сколько машина может проехать
-    public double CarCanGo() {
+    public double CarDistance() {
         double distance;
-        distance = amountOfFuelInTheTank / fuelConsumption * 100;
+        distance = FuelInTank / Consumption * 100;
         return distance;
 
     }
