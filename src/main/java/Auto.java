@@ -43,8 +43,6 @@ public class Auto {
         assert dateOne != null;
         long difference = todaySdate.getTime() - dateOne.getTime();
         int days = (int) (difference / (24 * 60 * 60 * 1000));
-        System.out.println("today's Date :" + todaySdate);
-        System.out.println("Days with inspection :" + days);
         return days <= 730;
     }
 
@@ -52,7 +50,6 @@ public class Auto {
     public double CarCanGo() {
         double distance;
         distance = amountOfFuelInTheTank / fuelConsumption * 100;
-        System.out.println("distance traveled by the car:" + distance);
         return distance;
 
     }
