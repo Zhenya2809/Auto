@@ -25,12 +25,12 @@ public class Auto {
 
 
     //Машина может ехать -> если у нее не пустой бак
-    public boolean CanGo() {
+    public boolean canGo() {
         return FuelInTank > 0;
     }
 
     //Машина допущена к эксплуатации -> если у дата техосмотра не превышает 2 года
-    public boolean ApprovedForUse() {
+    public boolean approvedForUse() {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         Date dateOne = null;
         Date todaySdate = new Date();
@@ -47,7 +47,7 @@ public class Auto {
     }
 
     //Сколько машина может проехать
-    public double CarDistance() {
+    public double carDistance() {
         double distance;
         distance = FuelInTank / Consumption * 100;
         return distance;

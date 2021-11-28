@@ -19,26 +19,26 @@ public class TestCar {
     @Test
     void testEmptyTank() {
         Auto car = new Auto(0, 16.5, "27.11.2020");
-        Assertions.assertFalse(car.CanGo());
+        Assertions.assertFalse(car.canGo());
     }
     @Test
     void testFullTank() {
         Auto car = new Auto(60, 16.5, "27.11.2020");
-        Assertions.assertTrue(car.CanGo());
+        Assertions.assertTrue(car.canGo());
     }
     @Test
     void testMoreThen2Years(){
         Auto car = new Auto(60, 16.5, "27.11.2017");
-        Assertions.assertFalse(car.ApprovedForUse());
+        Assertions.assertFalse(car.approvedForUse());
     }
     @Test
     void testLessThen2Years(){
         Auto car = new Auto(60, 16.5, "27.11.2020");
-        Assertions.assertTrue(car.ApprovedForUse());
+        Assertions.assertTrue(car.approvedForUse());
     }
     @Test
     void test500km(){
         Auto car = new Auto(50, 10d, "27.11.2020");
-        Assertions.assertEquals(car.CarDistance(),500);
+        Assertions.assertEquals(car.carDistance(),500);
     }
 }
